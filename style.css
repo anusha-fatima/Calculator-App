@@ -1,0 +1,251 @@
+@font-face {
+  font-family: League Spartan;
+  src: url(./font/LeagueSpartan-Black.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: League Spartan;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  min-height: 100%;
+  background-color: hsl(222, 26%, 31%);
+}
+body.active1 {
+  background-color: hsl(0, 0%, 90%);
+}
+body.active1 .btn {
+  background-color: hsl(0, 5%, 81%);
+}
+body.active2 {
+  background-color: hsl(268, 75%, 9%);
+}
+body.active2 .btn {
+  background-color: hsl(268, 71%, 12%);
+}
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.active2 h3 {
+  color: hsl(52, 100%, 62%);
+}
+body.active2 h4 {
+  color: hsl(52, 100%, 62%);
+}
+body.active1 h3 {
+  color: #111;
+}
+body.active1 h4 {
+  color: #111;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+body.active1 .control p {
+  color: #111;
+}
+body.active1 .right p {
+  color: #111;
+}
+body.active2 .control p {
+  color: hsl(52, 100%, 62%);
+}
+body.active2 .right p {
+  color: hsl(52, 100%, 62%);
+}
+.toggle p {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.controller h4 {
+  float: right;
+  color: #fff;
+  margin-right: 3rem;
+  margin-top: 1rem;
+}
+h3 {
+  color: #fff;
+}
+.circle {
+  width: 20px;
+  height: 10px;
+  background: #000;
+}
+#screen {
+  width: 32vw;
+  min-height: 13vh;
+  border-radius: 0.55rem;
+  font-size: 3.5rem;
+  text-align: right;
+  background-color: hsl(224, 36%, 15%);
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+body.active1 #screen {
+  background-color: hsl(0, 0%, 93%);
+  color: #111;
+}
+body.active2 #screen {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+.btn {
+  display: flex;
+  flex-flow: wrap;
+  width: 32vw;
+  background-color: hsl(223, 31%, 20%);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 0.55rem;
+}
+button {
+  width: 6vw;
+  height: 6vh;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 1rem 0.55rem;
+  box-shadow: 0 5px 0 0 hsl(224deg 28% 35%);
+  font-size: 2rem;
+}
+
+body.active1 button {
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+body.active2 button {
+  box-shadow: 0px 3px 0px 0px hsl(268, 47%, 21%);
+  background-color: hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+.reset,
+.equalto {
+  width: 10vw;
+}
+.reset,
+.del {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 5px 0 0 hsl(223, 28%, 35%);
+  font-size: 1.5rem;
+}
+.equalto {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0 5px 0 0 hsl(6, 70%, 34%);
+  font-size: 1rem;
+}
+body.active1 .reset,
+body.active1 .del {
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  background-color: hsl(185, 42%, 37%);
+}
+body.active2 .reset,
+body.active2 .del {
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  background-color: hsl(268, 47%, 21%);
+  color: #fff;
+}
+body.active1 .equalto {
+  box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+  background-color: hsl(25, 98%, 40%);
+}
+body.active2 .equalto {
+  box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+  background-color: hsl(176, 100%, 44%);
+  color: #fff;
+}
+.slider {
+  float: right;
+  width: 6vw;
+  height: 4vh;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 1rem;
+  margin: 0.35rem 0.15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.slider #circle {
+  border-radius: 1rem;
+  width: 2vw;
+  height: 4vh;
+  opacity: 0;
+  appearance: none;
+  background-color: hsl(6, 63%, 50%);
+
+  position: relative;
+}
+.slider #circle {
+  opacity: 1;
+}
+.slider #circle:hover {
+  cursor: pointer;
+}
+body.active1 .slider #circle {
+  background-color: hsl(25, 98%, 40%);
+}
+body.active2 .slider #circle {
+  background-color: hsl(176, 100%, 44%);
+}
+body.active1 .slider {
+  background-color: hsl(0, 5%, 81%);
+}
+body.active2 .slider {
+  background-color: hsl(268, 71%, 12%);
+}
+@media (max-width: 768px) {
+  body {
+    min-height: 100%;
+    padding: 1rem;
+  }
+  .btn {
+    width: 90vw;
+    height: 85vh;
+    border-radius: 0.55rem;
+  }
+  #screen {
+    width: 90vw;
+    min-height: 13vh;
+    border-radius: 0.55rem;
+  }
+  button {
+    width: 15vw;
+    height: 10vh;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin:0.55rem 0.15rem;
+  }
+  .reset,
+  .equalto  {
+    width: 30vw;
+  }
+
+.del {
+  width: 15vw;
+}
+.toggle p {
+  margin: 0 1rem;
+}
+  .slider {
+    width: 15vh;
+  }
+  .slider #circle {
+    border-radius: 1.5rem;
+    width: 6vw;
+    height: 4vh;
+  }
+}
